@@ -29,3 +29,103 @@
   color: var(--gold-hover);
   background-color: var(--circle-blue);
 }
+
+/* Hero Section */
+.hero-section {
+    padding: 6rem 0;
+    background-color: white;
+  }
+  
+  /* Hero Title */
+  .hero-title {
+    color: #333;
+  }
+
+  .hero-subtitle {
+    color: #333;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .hero-buttons {
+    margin-top: 2rem;
+  }
+  
+  /* Get in touch button */
+  .hero-contact-btn {
+    background-color: var(--circle-blue);
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .hero-contact-btn:hover {
+    color: var(--gold-hover);
+    background-color: var(--circle-blue);
+  }
+  
+  /* See our work link */
+  .hero-link {
+    font-size: 1.1rem;
+    color: #6c757d;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .hero-link:hover {
+    color: var(--circle-blue);
+    text-decoration: underline;
+  }
+
+  .img-hero {
+    position: relative;
+    display: inline-block;
+  }
+
+  .hero-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Common floating card style */
+.hero-card {
+    position: absolute;
+    width: 280px;
+    height: auto;
+    z-index: 2;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Card 1 – top-left over hero image */
+  .card-1 {
+    top: 5%;
+    left: -10%;
+  }
+  
+  /* Card 2 – slightly lower and more to the right */
+  .card-2 {
+    top: 70%;
+    left: 50%;
+  }
+  
+  /* Optional: small hover float effect */
+  .hero-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991.98px) {
+    .hero-card {
+      width: 80px;
+    }
+  
+    .card-1 {
+      top: 5%;
+      left: 10%;
+    }
+  
+    .card-2 {
+      top: 25%;
+      left: 25%;
+    }
+  }
