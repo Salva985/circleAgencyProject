@@ -1,0 +1,31 @@
+:root {
+    --circle-blue: #072AC8;
+    --gold-hover: #FFC600;
+}
+
+/* NAVBAR LINKS */
+.navbar-nav .nav-link {
+    color: var(--circle-blue);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Contact Us button (desktop + mobile) */
+#menuBtn,
+.navbar .btn-outline-primary {
+  background-color: var(--circle-blue);
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#menuBtn:hover,
+.navbar .btn-outline-primary:hover {
+  color: var(--gold-hover);
+  background-color: var(--circle-blue);
+}
