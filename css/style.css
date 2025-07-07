@@ -1,14 +1,14 @@
 :root {
-    --circle-blue: #072AC8;
-    --gold-hover: #FFC600;
+  --circle-blue: #072ac8;
+  --gold-hover: #ffc600;
 }
 
 /* NAVBAR LINKS */
 .navbar-nav .nav-link {
-    color: var(--circle-blue);
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
+  color: var(--circle-blue);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
@@ -32,100 +32,193 @@
 
 /* Hero Section */
 .hero-section {
-    padding: 6rem 0;
-    background-color: white;
-  }
-  
-  /* Hero Title */
-  .hero-title {
-    color: #333;
-  }
+  padding: 6rem 0;
+  background-color: white;
+}
 
-  .hero-subtitle {
-    color: #333;
-    font-size: 1.25rem;
-    margin-top: 1rem;
-  }
+/* Hero Title */
+.hero-title {
+  color: #333;
+}
 
-  .hero-buttons {
-    margin-top: 2rem;
-  }
-  
-  /* Get in touch button */
-  .hero-contact-btn {
-    background-color: var(--circle-blue);
-    color: white;
-    border: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .hero-contact-btn:hover {
-    color: var(--gold-hover);
-    background-color: var(--circle-blue);
-  }
-  
-  /* See our work link */
-  .hero-link {
-    font-size: 1.1rem;
-    color: #6c757d;
-    text-decoration: none;
-    transition: all 0.2s ease;
-  }
-  
-  .hero-link:hover {
-    color: var(--circle-blue);
-    text-decoration: underline;
-  }
+.hero-subtitle {
+  color: #333;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
 
-  .img-hero {
-    position: relative;
-    display: inline-block;
-  }
+.hero-buttons {
+  margin-top: 2rem;
+}
 
-  .hero-img {
-    max-width: 100%;
-    height: auto;
-  }
+/* Get in touch button */
+.hero-contact-btn {
+  background-color: var(--circle-blue);
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  /* Common floating card style */
+.hero-contact-btn:hover {
+  color: var(--gold-hover);
+  background-color: var(--circle-blue);
+}
+
+/* See our work link */
+.hero-link {
+  font-size: 1.1rem;
+  color: #6c757d;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.hero-link:hover {
+  color: var(--circle-blue);
+  text-decoration: underline;
+}
+
+.img-hero {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Common floating card style */
 .hero-card {
-    position: absolute;
-    width: 280px;
-    height: auto;
-    z-index: 2;
-    transition: transform 0.3s ease;
+  position: absolute;
+  width: 280px;
+  height: auto;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+/* Card 1 – top-left over hero image */
+.card-1 {
+  top: 5%;
+  left: -10%;
+}
+
+/* Card 2 – bottom-right over hero image */
+.card-2 {
+  top: 70%;
+  left: 50%;
+}
+
+/* Optional: small hover float effect */
+.hero-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .hero-card {
+    width: 80px;
   }
-  
-  /* Card 1 – top-left over hero image */
+
   .card-1 {
     top: 5%;
-    left: -10%;
+    left: 10%;
   }
-  
-  /* Card 2 – slightly lower and more to the right */
+
   .card-2 {
-    top: 70%;
-    left: 50%;
+    top: 25%;
+    left: 25%;
+  }
+}
+
+/*CLIENTS LOGOS-LINKS*/
+
+.clients {
+  background-color: #f8f9fa;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.client-logo {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  opacity: 0.8;
+}
+
+.client-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/*PROJECT CARDS*/
+.recent-projects {
+    padding: 5rem 2rem;
+    background-color: #fff;
   }
   
-  /* Optional: small hover float effect */
-  .hero-card:hover {
-    transform: translateY(-5px);
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
   }
   
-  /* Responsive adjustments */
-  @media (max-width: 991.98px) {
-    .hero-card {
-      width: 80px;
-    }
+  .project-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
   
-    .card-1 {
-      top: 5%;
-      left: 10%;
-    }
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-wrapper {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
   
-    .card-2 {
-      top: 25%;
-      left: 25%;
-    }
+  .img-project {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .project-inner-card {
+    padding: 1rem;
+  }
+  
+  .project-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-description {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .learn-more {
+    color: var(--circle-blue);
+    font-weight: bold;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.3s ease;
+  }
+
+  .learn-more:hover {
+    text-decoration: underline;
   }
