@@ -2,18 +2,19 @@ window.addEventListener('load', () => {
     const container = document.querySelector('.projects-container');
   
     fetch('https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects')
-      .then(res => res.text()) // Fetch as text first
+      .then(res => res.text())
       .then(data => {
-        const projects = JSON.parse(data); // Then manually parse
-        const topProjects = projects.filter(p =>
-            ["1", "2", "3"].includes(p.uuid)
+        const projects = JSON.parse(data);
+  
+        const topProjects = ["1", "2", "3"].map(id =>
+            projects.find(p => p.uuid === id)
           );
   
         topProjects.forEach(project => {
-          const article = document.createElement('article');
-          article.className = 'project-card';
+          const card = document.createElement("article");
+          card.className = "project-card";
   
-          article.innerHTML = `
+          card.innerHTML = `
             <a class="project-wrapper" href="./projects/${project.uuid}.html">
               <img class="img-project" src="${project.image}" alt="${project.name}" />
               <div class="project-inner-card">
@@ -24,10 +25,10 @@ window.addEventListener('load', () => {
             </a>
           `;
   
-          container.appendChild(article);
+          container.appendChild(card);
         });
       })
       .catch(err => {
-        console.error("Failed to load projects:", err);
+        console.error('Failed to load projects:', err);
       });
   });
