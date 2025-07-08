@@ -553,3 +553,37 @@
     font-size: 2.2rem;
     font-weight: bold;
   }
+
+  /* CONTACT SECTION/FORM */
+
+  .contact-submit {
+    background-color: var(--circle-blue);
+    color: white;
+    border: none;
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-submit:hover {
+    background-color: var(--circle-blue);
+    color: var(--gold-hover);
+  }
+
+  /* Sticky footer layout */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    flex: 1;
+  }
