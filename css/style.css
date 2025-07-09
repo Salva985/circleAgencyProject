@@ -557,7 +557,7 @@ body {
   cursor: pointer;
   transition: opacity 0.3s ease;
   opacity: 0;
-  visibility: hidden;
+  visibility: hidden; 
   animation: bounce 2s infinite ease-in-out;
 }
 
@@ -567,10 +567,12 @@ body {
 }
 
 .scroll-to-top .fas {
-  color: white;
-  font-size: 2.2rem;
+  color: rgb(253, 253, 253);
+  font-size: 3rem;
   font-weight: bold;
 }
+
+
 
 /* CONTACT SECTION/FORM */
 
@@ -580,7 +582,7 @@ body {
 }
 
 .contact-section .form-control {
-  background-color: rgba(211, 211, 211, 0.3); /* Light grey transparent */
+  background-color: rgba(211, 211, 211, 0.3); 
   border-radius: 6px;
   font-size: 1rem;
   padding: 0.75rem 1rem;

@@ -35,17 +35,21 @@ window.addEventListener('load', () => {
 
 
 
-  document.addEventListener("DOMContentLoaded", () => {
+/*   document.addEventListener("DOMContentLoaded", () => {
     const scrollBtn = document.getElementById("scrollToTop");
   
     if (scrollBtn) {
-      window.addEventListener("scroll", () => {
+        console.log("Scroll button found:", scrollBtn);
+
+      document.addEventListener("scroll", () => {    
+
+        console.log("Scrolled!", window.scrollY);
         if (window.scrollY > 300) {
           scrollBtn.classList.add("show");
         } else {
           scrollBtn.classList.remove("show");
         }
-      });
+      }); 
   
       scrollBtn.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -53,7 +57,35 @@ window.addEventListener('load', () => {
     } else {
       console.warn("Scroll-to-top button not found in DOM.");
     }
+  }); */
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollBtn = document.getElementById("scrollToTop");
+  
+    if (!scrollBtn) {
+      console.warn("Scroll-to-top button not found.");
+      return;
+    }
+  
+    console.log("Scroll button found:", scrollBtn);
+  
+    // ✅ Use `document.body` instead of `window`
+    document.body.addEventListener("scroll", () => {
+      console.log("BODY scrollY:", document.body.scrollTop); // optional debug
+  
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
+    });
+  
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   });
+ 
+
 
 
 
