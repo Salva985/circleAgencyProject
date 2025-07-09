@@ -35,16 +35,25 @@ window.addEventListener('load', () => {
 
 
 
-  const scrollBtn = document.getElementById("scrollToTop");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollBtn.classList.add("show");
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollBtn = document.getElementById("scrollToTop");
+  
+    if (scrollBtn) {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollBtn.classList.add("show");
+        } else {
+          scrollBtn.classList.remove("show");
+        }
+      });
+  
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
     } else {
-      scrollBtn.classList.remove("show");
+      console.warn("Scroll-to-top button not found in DOM.");
     }
   });
-  
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }); 
+
+
+

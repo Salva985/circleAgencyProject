@@ -61,6 +61,7 @@ To run the project locally:
 ```bash
 git clone https://github.com/Salva985/circle-agency.git
 cd circle-agency
+```
 
 ## ✍️  Author
 
@@ -72,4 +73,4 @@ LinkedIn: [linkedin.com/in/salvatore-marchese](https://linkedin.com/in/your-prof
 
 ## 📄 License
 
-This project is for educational purposes.
+No license. This project is for educational purposes.
