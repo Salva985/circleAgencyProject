@@ -35,22 +35,35 @@ Check out the live version of the site:
 
 ## 📁 Project Structure
 
+<pre><code>
 /assets
     /logos
     /services-section
+    /projects-section
+    /newsletter
     /testimonial-section
     /hero-section
+/components
+    footer.html
+    navbar.html
+    newsletter.html
 /css
     style.css
 /js
     main.js
     loadFooter.js
+    loadNavbar.js
     loadNewsletter.js
+    project.js
 /pages
     contact.html
-    project1.html
+    1.html
+    2.html
+    3.html
+    4.html
 index.html
 README.md
+</code></pre>
 
 ---
 

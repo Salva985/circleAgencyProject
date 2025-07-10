@@ -535,13 +535,13 @@ body {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
 }
 
 
 .scroll-to-top {
-  z-index: 999;
+  z-index: 1000;
   position: fixed;
   bottom: 40px;
   right: 30px;
@@ -553,12 +553,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease,  visibility 0.3s ease;
   opacity: 0;
   visibility: hidden; 
   animation: bounce 2s infinite ease-in-out;
+  text-decoration: none;
 }
 
 .scroll-to-top.show {
@@ -566,10 +566,9 @@ body {
   visibility: visible;
 }
 
-.scroll-to-top .fas {
+.scroll-to-top i {
   color: rgb(253, 253, 253);
   font-size: 3rem;
-  font-weight: bold;
 }
 
 

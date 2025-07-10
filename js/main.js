@@ -38,42 +38,13 @@ window.addEventListener('load', () => {
 /*   document.addEventListener("DOMContentLoaded", () => {
     const scrollBtn = document.getElementById("scrollToTop");
   
-    if (scrollBtn) {
-        console.log("Scroll button found:", scrollBtn);
-
-      document.addEventListener("scroll", () => {    
-
-        console.log("Scrolled!", window.scrollY);
-        if (window.scrollY > 300) {
-          scrollBtn.classList.add("show");
-        } else {
-          scrollBtn.classList.remove("show");
-        }
-      }); 
+    if (!scrollBtn) return;
   
-      scrollBtn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    } else {
-      console.warn("Scroll-to-top button not found in DOM.");
-    }
-  }); */
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const scrollBtn = document.getElementById("scrollToTop");
-  
-    if (!scrollBtn) {
-      console.warn("Scroll-to-top button not found.");
-      return;
-    }
-  
-    console.log("Scroll button found:", scrollBtn);
-  
-    // ✅ Use `document.body` instead of `window`
+    //document.body instead of window 
     document.body.addEventListener("scroll", () => {
-      console.log("BODY scrollY:", document.body.scrollTop); // optional debug
-  
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+
+      if (scrollTop > 300) {
         scrollBtn.classList.add("show");
       } else {
         scrollBtn.classList.remove("show");
@@ -83,6 +54,25 @@ window.addEventListener('load', () => {
     scrollBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+  }); */
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollBtn = document.getElementById("scrollToTop");
+  
+    if (!scrollBtn) return;
+  
+    document.body.addEventListener("scroll", () => {
+      const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+      if (scrollTop > 300) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
+    });
+    
+    scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
   });
  
 
